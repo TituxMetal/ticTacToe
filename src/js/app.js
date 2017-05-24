@@ -8,11 +8,12 @@ function playerTurn() {
 }
 
 function play() {
-	round++
-	this.innerHTML === '' ? this.innerHTML = playerTurn() : ''
-	playerWin()
-	if (round >= 9) {
-		displayWinner(false)
+	if (this.innerHTML === '') {
+		round++
+		this.innerHTML = playerTurn()
+		playerWin()
+	} else {
+		return false
 	}
 }
 
@@ -113,9 +114,12 @@ function playerWin() {
 			squares[4].innerHTML === squares[6].innerHTML
 	) {
 		displayWinner(squares[2].innerHTML)
-	} else {
-		return false
+	}
+	// all squares are full
+	else if (round >= 9) {
+		displayWinner(false)
 	}
 }
 
+// when a sqaure is clicked, play the game
 squares.forEach((sq) => sq.addEventListener("mousedown", play))
