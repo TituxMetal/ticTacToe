@@ -1,18 +1,18 @@
 {
-  "name": "tuxtactoe-game",
-  "author": "Titux Metal <lang.guillaume@gmail.com>",
+  "author": "Titux Metal <github@lgdweb.fr>",
   "description": "Tic Tac Toe game made in javascript",
   "homepage": "https://tuxtactoe.tuxlab.fr",
-  "version": "1.0.0",
   "license": "MIT",
+  "name": "tuxtactoe-game",
+  "version": "1.0.0",
   "scripts": {
     "build": "NODE_ENV=production webpack --mode=production",
     "dev": "webpack-dev-server"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TituxMetal/ticTacToe"
-  },
+  "browserslist": [
+    ">0.8%",
+    "not ie <= 11"
+  ],
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
@@ -36,8 +36,8 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
-  "browserslist": [
-    ">0.8%",
-    "not ie <= 11"
-  ]
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TituxMetal/ticTacToe"
+  }
 }
